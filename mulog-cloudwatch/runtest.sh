@@ -16,6 +16,7 @@ wait_for localstack localhost 4586
 
 lein midje
 
+docker-compose logs
 docker-compose kill
 docker-compose rm -f
 
