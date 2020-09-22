@@ -5,7 +5,9 @@ services:
     ports:
       - "4566-4599:4566-4599"
     environment:
-      - USE_SSL=true
-      - SERVICES=cloudwatch,logs
-      - DEBUG=1
-      - LAMBDA_EXECUTOR=local
+      HOSTNAME: "localstack"
+      HOSTNAME_EXTERNAL: "localstack"
+      USE_SSL: "true"
+      SERVICES: "cloudwatch,logs"
+      DEBUG: "1"
+      LAMBDA_EXECUTO: "local"
