@@ -30,7 +30,7 @@
 
   :aliases {"test" ["do"
                     ["shell" "docker-compose" "up" "-d"]
-                    ["shell" "sleep" "5"]
+                    ["shell" "sleep" "15"]
                     ["midje"]
                     ["shell" "docker-compose" "kill"]
                     ["shell" "docker-compose" "rm" "-f"]]}
