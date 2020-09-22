@@ -28,10 +28,11 @@
                    :plugins      [[lein-midje "3.2.2"]
                                   [lein-shell "0.5.0"]]}}
 
-  :aliases {"test" ["do"
-                    ["shell" "docker-compose" "up" "-d"]
-                    ["shell" "sleep" "15"]
-                    ["midje"]
-                    ["shell" "docker-compose" "kill"]
-                    ["shell" "docker-compose" "rm" "-f"]]}
+  :aliases {"test" ["shell" "./runtest.sh"]
+            #_["do"
+               ["shell" "docker-compose" "up" "-d"]
+               ["shell" "sleep" "15"]
+               ["midje"]
+               ["shell" "docker-compose" "kill"]
+               ["shell" "docker-compose" "rm" "-f"]]}
   )
