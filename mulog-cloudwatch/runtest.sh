@@ -20,4 +20,6 @@ docker-compose logs
 docker-compose kill
 docker-compose rm -f
 
+env | sort
+
 exit 1
