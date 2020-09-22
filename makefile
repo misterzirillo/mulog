@@ -70,7 +70,7 @@ prep: clean ancient format build
 #
 # Build
 #
-build: build-core build-json build-els build-jvm-metrics build-kafka build-kinesis build-cloudwatch build-slack build-zipkin build-prometheus build-examples
+build: build-core build-json build-cloudwatch build-kinesis ## TODO:FIX build-els build-jvm-metrics build-kafka build-kinesis build-cloudwatch build-slack build-zipkin build-prometheus build-examples
 - @printf "#\n# Building μ/log Completed!\n#\n"
 
 
@@ -141,7 +141,7 @@ cloudwatch_src = $(shell find mulog-cloudwatch/project.clj mulog-cloudwatch/src 
 build-cloudwatch: build-core mulog-cloudwatch/target/mulog*.jar
 mulog-cloudwatch/target/mulog*.jar: $(cloudwatch_src)
 - @printf "#\n# Building mulog-cloudwatch\n#\n"
-- (cd mulog-cloudwatch; lein do check, install) # TODO: fix Region error and add test
+- (cd mulog-cloudwatch; lein do check, test, install) # TODO: fix Region error and add test
 
 
 #
